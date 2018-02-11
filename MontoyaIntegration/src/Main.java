@@ -32,6 +32,7 @@ public class Main {
 				+ lastName.substring(1) + " has a Body Mass Index of: "
 				+ Math.round(BMI)); // Runs a substring to capitalize the first letter
 														// in each word
+		
 
 		if (BMI < 18.5) {// Determines what your BMI signifies
 			System.out.print("You are considered Underweight");
@@ -71,11 +72,11 @@ public class Main {
 class Car {
 	private String Color;
 
-	public String getColor() {
+	public String getColor() { //gets the color 
 		return Color;
 	}
 
-	public void setColor(String b) {
+	public void setColor(String b) { // sets to a specific color
 		Color = "black";
 	}
 }
