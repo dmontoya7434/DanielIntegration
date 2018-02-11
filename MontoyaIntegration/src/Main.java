@@ -57,10 +57,18 @@ public class Main {
 			System.out.println("Your BMI is an odd number.");
 		}
 		System.out.println();
-		System.out.println("This part will give you the speed of a car.");
+
+		System.out.println("This part ask for two integers");
+		System.out.println("Enter a value:");
+		int value1 = in.nextInt();
+		System.out.println("Enter another value:");
+		int value2 = in.nextInt();
+		System.out.println("The sum is: " + (value1 + value2));
+		System.out.println("The difference is: " + (value2 - value1));
+		System.out.println();
 
 		// This part displays the color of my car.
-
+		System.out.println("This part will give you the color of a car.");
 		Car myCar = new Car();
 		myCar.setColor("Black"); // sets the color to a specific color.
 		System.out.println("My car's color is " + myCar.getColor()); 
