@@ -1,7 +1,7 @@
 
 // Daniel Montoya
 // This integration project is on skills that I learned.
-// 50 lines of code 
+ 
 import java.util.Scanner;
 
 public class Main {
@@ -62,9 +62,9 @@ public class Main {
 		// This part displays the color of my car.
 
 		Car myCar = new Car();
-		myCar.setColor("Black"); // sets the speed to a specific number.
+		myCar.setColor("Black"); // sets the color to a specific color.
 		System.out.println("My car's color is " + myCar.getColor()); 
-		// gets the Speed that its set to from the top.
+		// gets the color that its set to from the top.
 																																			
 	}
 }
