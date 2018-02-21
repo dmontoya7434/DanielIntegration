@@ -88,5 +88,5 @@ class Car {
 
   public void setColor(String b) { // sets to a specific color
     Color = "black";
-  }
+  } 
 }
