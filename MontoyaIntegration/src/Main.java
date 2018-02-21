@@ -5,7 +5,7 @@
 import java.util.Scanner;
 
 public class Main {
-  private static double CalculateBMI(double weight, int height) {
+  private static double calculateBMI(double weight, int height) {
 
     double BMI = (weight * 703) / (height * height);
     return BMI;
@@ -13,6 +13,7 @@ public class Main {
 
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
+    
     System.out.println("Welcome to my integration project!");
     System.out.println("This program will calculate your Body Mass Index");
 
@@ -25,7 +26,8 @@ public class Main {
     double weight = in.nextDouble();
     System.out.println("Enter the patient's height in inches: ");
     int height = in.nextInt();
-    double BMI = CalculateBMI(weight, height); // Calling the Calculate method
+    
+    double BMI = calculateBMI(weight, height); // Calling the Calculate method
                                                // and setting it as the value
                                                // for BMI
     System.out.println("The patient " + firstName.substring(0, 1).toUpperCase()
