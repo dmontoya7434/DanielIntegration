@@ -5,55 +5,59 @@
 import java.util.Scanner;
 
 public class Main {
+
+  // The code below this is called a header and in the () they are called the
+  // parameters
   private static double calculateBMI(double weight, int height) {
 
-    double BMI = (weight * 703) / (height * height);
-    return BMI;
+    double bmi = (weight * 703) / (height * height);
+    return bmi;
   }
 
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
-    
+
     System.out.println("Welcome to my integration project!");
-    System.out.println("This program will calculate your Body Mass Index");
+    System.out.println("This program will calculate Body Mass Index");
 
     System.out.println("Enter the patient's first name: ");
     String firstName = in.nextLine();
     System.out.println("Enter the patient's last name: ");
     String lastName = in.nextLine();
 
-    System.out.println("Enter the patients weight in pounds: ");
+    System.out.println("Enter the patient's weight in pounds: ");
     double weight = in.nextDouble();
     System.out.println("Enter the patient's height in inches: ");
     int height = in.nextInt();
-    
-    double BMI = calculateBMI(weight, height); // Calling the Calculate method
-                                               // and setting it as the value
-                                               // for BMI
+
+    double bmi = calculateBMI(weight, height); // Calling the Calculate
+    // method and inside the () are arguments
+    // and setting it as the value
+    // for BMI
     System.out.println("The patient " + firstName.substring(0, 1).toUpperCase()
         + firstName.substring(1) + " " + lastName.substring(0, 1).toUpperCase()
         + lastName.substring(1) + " has a Body Mass Index of: "
-        + Math.round(BMI)); // Runs a substring to capitalize the first letter
+        + Math.round(bmi)); // Runs a substring to capitalize the first letter
                             // in each word
 
-    if (BMI < 18.5) {// Determines what your BMI signifies
+    if (bmi < 18.5) {// Determines what your BMI signifies
       System.out.print("You are considered Underweight");
     }
 
-    else if (BMI >= 18.5 && BMI < 25) {
+    else if (bmi < 25) {
       System.out.print("You are considered Normal.");
     }
 
-    else if ( BMI >= 25 && BMI < 30) {
+    else if (bmi < 30) {
       System.out.print("You are considered Overweight.");
     }
 
-    else if (BMI >= 30) {
+    else {
       System.out.print("You are considered Obese.");
     }
     System.out.println();
 
-    if ((int) BMI % 2 == 0) {// Determines if your BMI is even or odd
+    if ((int) bmi % 2 == 0) {// Determines if your BMI is even or odd
       System.out.println("Your BMI is an even number.");
     } else {
       System.out.println("Your BMI is an odd number.");
@@ -78,15 +82,57 @@ public class Main {
 
   }
 }
+// byte: The byte data type is an 8-bit signed two's complement integer. It has
+// a minimum value of -128 and a maximum value of 127 (inclusive). The byte data
+// type can be useful for saving memory in large arrays, where the memory
+// savings actually matters. They can also be used in place of int where their
+// limits help to clarify your code; the fact that a variable's range is limited
+// can serve as a form of documentation.
 
-class Car {
-  private String Color;
+// short: The short data type is a 16-bit signed two's complement integer. It
+// has a minimum value of -32,768 and a maximum value of 32,767 (inclusive). As
+// with byte, the same guidelines apply: you can use a short to save memory in
+// large arrays, in situations where the memory savings actually matters.
 
-  public String getColor() { // gets the color
-    return Color;
-  }
+// int: By default, the int data type is a 32-bit signed two's complement
+// integer, which has a minimum value of -231 and a maximum value of 231-1. In
+// Java SE 8 and later, you can use the int data type to represent an unsigned
+// 32-bit integer, which has a minimum value of 0 and a maximum value of 232-1.
+// Use the Integer class to use int data type as an unsigned integer. See the
+// section The Number Classes for more information. Static methods like
+// compareUnsigned, divideUnsigned etc have been added to the Integer class to
+// support the arithmetic operations for unsigned integers.
 
-  public void setColor(String b) { // sets to a specific color
-    Color = "black";
-  } 
-}
+// long: The long data type is a 64-bit two's complement integer. The signed
+// long has a minimum value of -263 and a maximum value of 263-1. In Java SE 8
+// and later, you can use the long data type to represent an unsigned 64-bit
+// long, which has a minimum value of 0 and a maximum value of 264-1. Use this
+// data type when you need a range of values wider than those provided by int.
+// The Long class also contains methods like compareUnsigned, divideUnsigned etc
+// to support arithmetic operations for unsigned long.
+
+// float: The float data type is a single-precision 32-bit IEEE 754 floating
+// point. Its range of values is beyond the scope of this discussion, but is
+// specified in the Floating-Point Types, Formats, and Values section of the
+// Java Language Specification. As with the recommendations for byte and short,
+// use a float (instead of double) if you need to save memory in large arrays of
+// floating point numbers. This data type should never be used for precise
+// values, such as currency. For that, you will need to use the
+// java.math.BigDecimal class instead. Numbers and Strings covers BigDecimal and
+// other useful classes provided by the Java platform.
+
+// double: The double data type is a double-precision 64-bit IEEE 754 floating
+// point. Its range of values is beyond the scope of this discussion, but is
+// specified in the Floating-Point Types, Formats, and Values section of the
+// Java Language Specification. For decimal values, this data type is generally
+// the default choice. As mentioned above, this data type should never be used
+// for precise values, such as currency.
+
+// boolean: The boolean data type has only two possible values: true and false.
+// Use this data type for simple flags that track true/false conditions. This
+// data type represents one bit of information, but its "size" isn't something
+// that's precisely defined.
+
+// char: The char data type is a single 16-bit Unicode character. It has a
+// minimum value of '\u0000' (or 0) and a maximum value of '\uffff' (or 65,535
+// inclusive).
