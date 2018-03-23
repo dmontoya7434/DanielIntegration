@@ -8,80 +8,114 @@ public class Main {
 
   // The code below this is called a header and in the () they are called the
   // parameters
-  private static double calculateBMI(double weight, int height) {
+  // private static double calculateBMI(double weight, int height) {
+  //
+  // double bmi = (weight * 703) / (height * height);
+  // return bmi;
+  // }
+  static int smallestNumber(int[] array) {
+    int smallest = array[0];
+    for (int i = 0; i < array.length; i++) {
+      if (array[i] < smallest) {
+        smallest = array[i];
+      }
+    }
+    return smallest;
+  }
 
-    double bmi = (weight * 703) / (height * height);
-    return bmi;
+  static int sumArray(int array[]) {
+    int sum = 0;
+
+    for (int i = 0; i < array.length; i++) {
+      sum += array[i];
+    }
+    return sum; // return result
   }
 
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
 
-    System.out.println("Welcome to my integration project!");
-    System.out.println("This program will calculate Body Mass Index");
+    // System.out.println("Welcome to my integration project!");
+    // System.out.println("This program will calculate Body Mass Index");
+    //
+    // System.out.println("Enter the patient's first name: ");
+    // String firstName = in.nextLine();
+    // System.out.println("Enter the patient's last name: ");
+    // String lastName = in.nextLine();
+    //
+    // System.out.println("Enter the patient's weight in pounds: ");
+    // double weight = in.nextDouble();
+    // System.out.println("Enter the patient's height in inches: ");
+    // int height = in.nextInt();
+    //
+    // double bmi = calculateBMI(weight, height); // Calling the Calculate
+    // // method and inside the () are arguments
+    // // and setting it as the value
+    // // for BMI
+    // System.out.println("The patient " + firstName.substring(0,
+    // 1).toUpperCase()
+    // + firstName.substring(1) + " " + lastName.substring(0, 1).toUpperCase()
+    // + lastName.substring(1) + " has a Body Mass Index of: "
+    // + Math.round(bmi)); // Runs a substring to capitalize the first letter
+    // // in each word
+    //
+    // if (bmi < 18.5) {// Determines what your BMI signifies
+    // System.out.print("You are considered Underweight");
+    // }
+    //
+    // else if (bmi < 25) {
+    // System.out.print("You are considered Normal.");
+    // }
+    //
+    // else if (bmi < 30) {
+    // System.out.print("You are considered Overweight.");
+    // }
+    //
+    // else {
+    // System.out.print("You are considered Obese.");
+    // }
+    // System.out.println();
+    //
+    // if ((int) bmi % 2 == 0) {// Determines if your BMI is even or odd
+    // System.out.println("Your BMI is an even number.");
+    // } else {
+    // System.out.println("Your BMI is an odd number.");
+    // }
+    // System.out.println();
+    //
+    // System.out.println("This part ask for two integers");
+    // System.out.println("Enter a value:");
+    // int value1 = in.nextInt();
+    // System.out.println("Enter another value:");
+    // int value2 = in.nextInt();
+    // System.out.println("The sum is: " + (value1 + value2));
+    // System.out.println("The difference is: " + (value2 - value1));
+    // System.out.println();
+    //
+    // // This part displays the color of my car.
+    // System.out.println("This part will give you the color of a car.");
+    // Car myCar = new Car();
+    // myCar.setColor("Black"); // sets the color to a specific color.
+    // System.out.println("My car's color is " + myCar.getColor());
+    // // gets the color that its set to from the top
 
-    System.out.println("Enter the patient's first name: ");
-    String firstName = in.nextLine();
-    System.out.println("Enter the patient's last name: ");
-    String lastName = in.nextLine();
-
-    System.out.println("Enter the patient's weight in pounds: ");
-    double weight = in.nextDouble();
-    System.out.println("Enter the patient's height in inches: ");
-    int height = in.nextInt();
-
-    double bmi = calculateBMI(weight, height); // Calling the Calculate
-    // method and inside the () are arguments
-    // and setting it as the value
-    // for BMI
-    System.out.println("The patient " + firstName.substring(0, 1).toUpperCase()
-        + firstName.substring(1) + " " + lastName.substring(0, 1).toUpperCase()
-        + lastName.substring(1) + " has a Body Mass Index of: "
-        + Math.round(bmi)); // Runs a substring to capitalize the first letter
-                            // in each word
-
-    if (bmi < 18.5) {// Determines what your BMI signifies
-      System.out.print("You are considered Underweight");
+    int array[] = { 10, 15, 3, 5 };
+    int smallest = array[0];
+    int index = 0;
+    System.out.println(
+        "The smallest number in the array is " + smallestNumber(array));
+    System.out.println("The sum is " + sumArray(array));
+  for ( int i = 0; i < array.length; i++) {
+    if (smallest > array[i]) {
+      smallest = array[i];
+      index = i;
     }
-
-    else if (bmi < 25) {
-      System.out.print("You are considered Normal.");
-    }
-
-    else if (bmi < 30) {
-      System.out.print("You are considered Overweight.");
-    }
-
-    else {
-      System.out.print("You are considered Obese.");
-    }
-    System.out.println();
-
-    if ((int) bmi % 2 == 0) {// Determines if your BMI is even or odd
-      System.out.println("Your BMI is an even number.");
-    } else {
-      System.out.println("Your BMI is an odd number.");
-    }
-    System.out.println();
-
-    System.out.println("This part ask for two integers");
-    System.out.println("Enter a value:");
-    int value1 = in.nextInt();
-    System.out.println("Enter another value:");
-    int value2 = in.nextInt();
-    System.out.println("The sum is: " + (value1 + value2));
-    System.out.println("The difference is: " + (value2 - value1));
-    System.out.println();
-
-    // This part displays the color of my car.
-    System.out.println("This part will give you the color of a car.");
-    Car myCar = new Car();
-    myCar.setColor("Black"); // sets the color to a specific color.
-    System.out.println("My car's color is " + myCar.getColor());
-    // gets the color that its set to from the top.
-
+  }
+     System.out.println("The position of the smallest number is: " + index);
+    
   }
 }
+
 // byte: The byte data type is an 8-bit signed two's complement integer. It has
 // a minimum value of -128 and a maximum value of 127 (inclusive). The byte data
 // type can be useful for saving memory in large arrays, where the memory

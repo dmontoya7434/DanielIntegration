@@ -2,6 +2,13 @@
 public class Car {
   private String color;
 
+  
+  public Car() { // constructor 
+    color = "black";
+  }
+  public Car(String col) { //overloaded constructor
+    color = "col";
+  }
   public String getColor() { // gets the color
     return color;
   }
@@ -11,3 +18,6 @@ public class Car {
   }
 
 }
+
+
+// int [][] score = new int [][]; [row][column] 
