@@ -15,6 +15,12 @@ public class simpleName {
   public void printName(String name) {
     System.out.println(last + "," + first);
   }
+  public String getfirstName() {
+    return first;
+  }
+  public String getlastName() {
+    return last;
+  }
  
 
 }

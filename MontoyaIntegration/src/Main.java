@@ -13,6 +13,21 @@ public class Main {
   // double bmi = (weight * 703) / (height * height);
   // return bmi;
   // }
+
+  private static simpleName getsimpleName() {// static means that it can be
+                                             // accessed without requiring an
+                                             // instantiation of the class to
+                                             // which it belongs.
+    String first;
+    String last;
+    Scanner in = new Scanner(System.in);
+    System.out.println("Enter first name");
+    first = in.nextLine();
+    System.out.println("Enter last name");
+    last = in.nextLine();
+    return new simpleName(first, last);
+  }
+
   static int smallestNumber(int[] array) {
     int smallest = array[0];
     for (int i = 0; i < array.length; i++) {
@@ -30,6 +45,15 @@ public class Main {
       sum += array[i];
     }
     return sum; // return result
+  }
+  public static int maxArray(int [] array) {
+    int max = array[0];
+    for (int num : array) {
+      if (num > max) {
+        max = num;
+      }
+    }
+    return max;
   }
 
   public static void main(String[] args) {
@@ -98,11 +122,16 @@ public class Main {
     // myCar.setColor("Black"); // sets the color to a specific color.
     // System.out.println("My car's color is " + myCar.getColor());
     // // gets the color that its set to from the top
-    
-    System.out.println( "The name displayed is in format last name then first name.");
-    simpleName someName = new simpleName("Bob", "Smith");
-    someName.printName("Name is: ");
-    
+
+    // System.out.println( "The name displayed is in format last name then first
+    // name.");
+    // simpleName someName = new simpleName("Bob", "Smith");
+    // someName.printName("Name is: ");
+    simpleName myName;
+    myName = getsimpleName();
+    System.out.println("Name in first-last formate is: " + myName.getfirstName()
+        + " " + myName.getlastName());
+
     System.out.println();
     int array[] = { 10, 15, 3, 5 };
     int smallest = array[0];
@@ -118,8 +147,26 @@ public class Main {
     }
     System.out.println(
         "The smallest number in the array is found in position: " + index);
+    System.out.println("The numbers in the array are: ");
+    int i = 0;
+    while(i < 4) {
+      System.out.print(array[i] + ",");
+      i++;
+    }
     System.out.println();
-
+    int max = maxArray(array);
+    System.out.println("The max number in the array is: " + max);
+    System.out.println();
+    
+    System.out.println("Example of palindrome");
+    String palindrome = "Dot saw I was Tod";
+    StringBuilder sb = new StringBuilder(palindrome); 
+     sb.reverse();
+    System.out.println(sb);
+   
+    System.out.println("The length of the word is: " + sb.length());
+    
+    System.out.println("The 10th letter is: " + sb.charAt(10));
   }
 }
 
