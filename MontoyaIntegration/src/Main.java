@@ -98,21 +98,28 @@ public class Main {
     // myCar.setColor("Black"); // sets the color to a specific color.
     // System.out.println("My car's color is " + myCar.getColor());
     // // gets the color that its set to from the top
-
+    
+    System.out.println( "The name displayed is in format last name then first name.");
+    simpleName someName = new simpleName("Bob", "Smith");
+    someName.printName("Name is: ");
+    
+    System.out.println();
     int array[] = { 10, 15, 3, 5 };
     int smallest = array[0];
     int index = 0;
     System.out.println(
         "The smallest number in the array is " + smallestNumber(array));
     System.out.println("The sum is " + sumArray(array));
-  for ( int i = 0; i < array.length; i++) {
-    if (smallest > array[i]) {
-      smallest = array[i];
-      index = i;
+    for (int i = 0; i < array.length; i++) {
+      if (smallest > array[i]) {
+        smallest = array[i];
+        index = i;
+      }
     }
-  }
-     System.out.println("The position of the smallest number is: " + index);
-    
+    System.out.println(
+        "The smallest number in the array is found in position: " + index);
+    System.out.println();
+
   }
 }
 

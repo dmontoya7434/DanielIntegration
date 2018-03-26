@@ -18,6 +18,3 @@ public class Car {
   }
 
 }
-
-
-// int [][] score = new int [][]; [row][column] 
