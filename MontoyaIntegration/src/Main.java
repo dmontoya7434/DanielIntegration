@@ -59,19 +59,19 @@ public class Main {
 
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
-    
-    Person edgar = new Person();//Example of inheritance
+
+    Person edgar = new Person(21);// Example of inheritance
     edgar.setName("Edgar");
-//    edgar.printIntfo();
-    
+    // edgar.printIntfo();
+
     Student jason = new Student();
     jason.setName("Jason");//
-//    jason.printIntfo();
-    
+    // jason.printIntfo();
+
     Person[] people = new Person[2];// example of polymorphism
     people[0] = jason;
     people[1] = edgar;
-    
+
     for (Person p : people) {
       p.printIntfo();// going to come from the person class and has to exist
     }
@@ -144,6 +144,7 @@ public class Main {
     // name.");
     // simpleName someName = new simpleName("Bob", "Smith");
     // someName.printName("Name is: ");
+
     simpleName myName;
     myName = getsimpleName();
     System.out.println("Name in first-last formate is: " + myName.getfirstName()
