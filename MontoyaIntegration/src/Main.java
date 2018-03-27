@@ -59,6 +59,22 @@ public class Main {
 
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
+    
+    Person edgar = new Person();//Example of inheritance
+    edgar.setName("Edgar");
+//    edgar.printIntfo();
+    
+    Student jason = new Student();
+    jason.setName("Jason");//
+//    jason.printIntfo();
+    
+    Person[] people = new Person[2];// example of polymorphism
+    people[0] = jason;
+    people[1] = edgar;
+    
+    for (Person p : people) {
+      p.printIntfo();// going to come from the person class and has to exist
+    }
 
     // System.out.println("Welcome to my integration project!");
     // System.out.println("This program will calculate Body Mass Index");

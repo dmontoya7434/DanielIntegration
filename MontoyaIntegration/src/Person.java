@@ -1,0 +1,30 @@
+
+public class Person {
+// use abstract keyword when you are never going to use that class
+  private int age;
+  private String address;
+  private String name;
+  public String getName() {
+    return name;
+  }
+  public void setName(String name) {
+    this.name = name;
+  }
+  public String getAddress() {
+    return address;
+  }
+  public void setAddress(String address) {
+    this.address = address;
+  }
+  public int getAge() {
+    return age;
+  }
+  public void setAge(int age) {
+    this.age = age;
+  }
+  
+  public void printIntfo() {
+    System.out.println("I am a person");
+  }
+  
+}
