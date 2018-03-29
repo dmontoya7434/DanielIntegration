@@ -178,6 +178,7 @@ public class Main {
 
     System.out.println("Example of palindrome");
     String palindrome = "Dot saw I was Tod";
+    System.out.println(palindrome);
     StringBuilder sb = new StringBuilder(palindrome);
     sb.reverse();
     System.out.println(sb);
