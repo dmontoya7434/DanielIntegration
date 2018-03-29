@@ -8,6 +8,7 @@ public class Student extends Person { // inheritance is an "is a" relationship
   public void printIntfo() {
     super.printIntfo();
     System.out.println("I am a student");
+    
   }
 
 }
