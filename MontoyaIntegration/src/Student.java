@@ -1,5 +1,5 @@
 
-public class Student extends Person {
+public class Student extends Person { // inheritance is an "is a" relationship
 
   public Student() {
     super(22);
