@@ -2,6 +2,7 @@
 // Daniel Montoya
 // This integration project is on skills that I learned.
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -58,7 +59,7 @@ public class Main {
   }
 
   public static void main(String[] args) {
-//    Scanner in = new Scanner(System.in);
+    Scanner in = new Scanner(System.in);
 
     // int num1 = 5;
     // int num2 = 0;
@@ -79,6 +80,11 @@ public class Main {
     demo.addition(a, b);
     demo.subtraction(a, b);
     demo.division(a, b);
+    
+//    Calculator myApp = new Calculator();
+//    IntegerMath addition = (a, b) -> a + b;
+//    IntegerMath subtraction = (a, b) -> a - b;
+//    System.out.println("40 + 2 = " + myApp.operateBinary(40,  2, addition));
 
     Person edgar = new Person(21);// Example of inheritance
     edgar.setName("Edgar");
@@ -206,7 +212,19 @@ public class Main {
     System.out.println("The length of the word is: " + sb.length());
 
     System.out.println("The 10th letter is: " + sb.charAt(10));
-
+    //Example of exception being thrown if value for x1 is not an integer
+    int x1 = 0;
+    boolean gottenGoodInput = false;
+    while (gottenGoodInput == false) {
+      System.out.println("Enter first number");
+      try {
+        x1 = in.nextInt();
+        gottenGoodInput = true;
+      } catch (InputMismatchException ex) {
+        System.out.println("Requires an integer");
+        in.nextInt();
+      }
+    } 
   }
 }
 
