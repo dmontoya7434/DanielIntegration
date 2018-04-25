@@ -1,5 +1,5 @@
 
-// Daniel Montoya
+// Daniel Montoya 
 // This integration project is on skills that I learned.
 
 import java.util.InputMismatchException;
@@ -61,16 +61,16 @@ public class Main {
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
 
-    // int num1 = 5;
-    // int num2 = 0;
-    //
-    // try {
-    // System.out.println(num1 / num2);
-    // //divide(num1, num2);
-    // } catch (Exception e) {
-    // System.out.println("Cannot divide by zero.");
-    // System.out.println(e.getMessage());
-    // }
+     int num1 = 5;
+     int num2 = 0;
+    
+     try {
+     System.out.println(num1 / num2);
+     //divide(num1, num2);
+     } catch (Exception e) {
+     System.out.println("Cannot divide by zero.");
+     System.out.println(e.getMessage());
+     }
 
     // Inheritance is where one class acquires the properties of another.
     // It is an "is a" relation
@@ -80,11 +80,6 @@ public class Main {
     demo.addition(a, b);
     demo.subtraction(a, b);
     demo.division(a, b);
-    
-//    Calculator myApp = new Calculator();
-//    IntegerMath addition = (a, b) -> a + b;
-//    IntegerMath subtraction = (a, b) -> a - b;
-//    System.out.println("40 + 2 = " + myApp.operateBinary(40,  2, addition));
 
     Person edgar = new Person(21);// Example of inheritance
     edgar.setName("Edgar");

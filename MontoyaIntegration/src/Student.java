@@ -1,7 +1,7 @@
 
 public class Student extends Person { // inheritance is an "is a" relationship
 
-  public Student() {
+  public Student() { // this demonstrates inheritance
     super(22);
   }
 
