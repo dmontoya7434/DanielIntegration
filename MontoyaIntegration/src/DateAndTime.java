@@ -4,7 +4,11 @@ public class DateAndTime {
 
   public static void main(String[] args) {
     // TODO Auto-generated method stub
-    System.currentTimeMillis();
+    // this prints out the local time and date
+    LocalDate localDate = LocalDate.now();
+    LocalTime time = LocalTime.now();
+    System.out.println(time);
+    System.out.println(localDate);
     
 
   }
