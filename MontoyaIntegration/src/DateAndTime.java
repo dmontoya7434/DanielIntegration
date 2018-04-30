@@ -1,8 +1,10 @@
 import java.time.*;
 import java.time.format.*;
+
 /**
  * This is a class to demonstrate how to retrieve date and time from the
  * computer.
+ * 
  * @author Daniel Montoya
  *
  */
@@ -15,7 +17,6 @@ public class DateAndTime {
     LocalTime time = LocalTime.now();
     System.out.println(time);
     System.out.println(localDate);
-    
 
   }
 

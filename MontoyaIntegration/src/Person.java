@@ -1,5 +1,6 @@
 /**
- * This is a class to demonstrate how to create a class 
+ * This is a class to demonstrate how to create a class
+ * 
  * @author Daniel Montoya
  *
  */

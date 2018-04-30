@@ -40,9 +40,10 @@ public class Main {
   }
 
   /**
-   * @param import the integers from the array into smallestnumber method Then the
-   *        method goes through the numbers to find the smallest number and  
-   *        returns it          
+   * @param import
+   *          the integers from the array into smallestnumber method Then the
+   *          method goes through the numbers to find the smallest number and
+   *          returns it
    */
   static int smallestNumber(int[] array) {
     int smallest = array[0];
@@ -53,10 +54,11 @@ public class Main {
     }
     return smallest;
   }
+
   /**
-   * @param imports the integers from the array into the method. Then the
-   *        method goes through the numbers to sum all the numbers and 
-   *        returns it          
+   * @param imports
+   *          the integers from the array into the method. Then the method goes
+   *          through the numbers to sum all the numbers and returns it
    */
   static int sumArray(int array[]) {
     int sum = 0;
@@ -66,9 +68,11 @@ public class Main {
     }
     return sum; // return result
   }
+
   /**
-   * @param Gets the integers form the array.
-   * Then the it goes through the array to find the biggest number and returns it.
+   * @param Gets
+   *          the integers form the array. Then the it goes through the array to
+   *          find the biggest number and returns it.
    */
   public static int maxArray(int[] array) {
     int max = array[0];
@@ -82,12 +86,12 @@ public class Main {
 
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
- 
+
     int num1 = 5;
     int num2 = 0;
     /**
      * the try-catch makes sure that num1 and num2 don't cause an exception and
-     * if they do then it will show a message. 
+     * if they do then it will show a message.
      */
     try {
       System.out.println(num1 / num2);
@@ -135,7 +139,8 @@ public class Main {
     System.out.println("Enter the patient's height in inches: ");
     int height = in.nextInt();
     /**
-     * @param calls weight and height to create a new value for bmi. 
+     * @param calls
+     *          weight and height to create a new value for bmi.
      */
     double bmi = calculateBMI(weight, height); // Calling the Calculate
     // method and inside the () are arguments
@@ -233,7 +238,7 @@ public class Main {
 
     System.out.println("The 10th letter is: " + sb.charAt(10));
     /**
-     *Example of exception being thrown if value for x1 is not an integer
+     * Example of exception being thrown if value for x1 is not an integer
      */
     int x1 = 0;
     boolean gottenGoodInput = false;
