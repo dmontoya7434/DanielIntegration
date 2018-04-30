@@ -1,4 +1,8 @@
-
+/**
+ * This is a class to demonstrate a lambda expression
+ * @author Daniel Montoya
+ *
+ */
 public class Calculator {
   interface IntegerMath {
     int operation(int a, int b);

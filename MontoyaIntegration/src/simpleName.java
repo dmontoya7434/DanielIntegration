@@ -1,5 +1,9 @@
 import java.util.Scanner;
-
+/**
+ * This is a class to demonstrate how to write a class method.
+ * @author Daniel Montoya
+ *
+ */
 public class simpleName {
   String first;
   String last;

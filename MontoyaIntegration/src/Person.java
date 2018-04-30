@@ -1,4 +1,8 @@
-
+/**
+ * This is a class to demonstrate how to create a class 
+ * @author Daniel Montoya
+ *
+ */
 public class Person {
   // use abstract keyword when you are never going to use that class
   private int age;

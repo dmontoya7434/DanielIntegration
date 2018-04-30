@@ -1,4 +1,9 @@
-
+/**
+ * This is a class to demonstrate constructors, overloaded constructor,
+ * setter/getters.
+ * @author Daniel Montoya
+ *
+ */
 public class Car {
   private String color;
 

@@ -1,24 +1,34 @@
 
-// Daniel Montoya 
-// This integration project is on skills that I learned.
+/**
+ * @author Daniel Montoya
+ * This integration project is on skills that I learned.
+ */
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
 
-  // The code below this is called a header and in the () they are called the
-  // parameters
-  // private static double calculateBMI(double weight, int height) {
-  //
-  // double bmi = (weight * 703) / (height * height);
-  // return bmi;
-  // }
+  /**
+   * @param gets
+   *          weight and height from code to calculate the bmi The code below
+   *          this is called a header and in the () they are called the
+   *          parameters.
+   */
+  private static double calculateBMI(double weight, int height) {
+    double bmi = (weight * 703) / (height * height);
+    return bmi;
+  }
 
-  private static simpleName getsimpleName() {// static means that it can be
-                                             // accessed without requiring an
-                                             // instantiation of the class to
-                                             // which it belongs.
+  private static simpleName getsimpleName() {
+    // static means that it can be
+    // accessed without requiring an
+    // instantiation of the class to
+    // which it belongs.
+    /**
+     * Stores the users input for name(first,last) and returns what the user
+     * inputs and creates a simplename
+     */
     String first;
     String last;
     Scanner in = new Scanner(System.in);
@@ -29,6 +39,11 @@ public class Main {
     return new simpleName(first, last);
   }
 
+  /**
+   * @param import the integers from the array into smallestnumber method Then the
+   *        method goes through the numbers to find the smallest number and  
+   *        returns it          
+   */
   static int smallestNumber(int[] array) {
     int smallest = array[0];
     for (int i = 0; i < array.length; i++) {
@@ -38,7 +53,11 @@ public class Main {
     }
     return smallest;
   }
-
+  /**
+   * @param imports the integers from the array into the method. Then the
+   *        method goes through the numbers to sum all the numbers and 
+   *        returns it          
+   */
   static int sumArray(int array[]) {
     int sum = 0;
 
@@ -47,7 +66,10 @@ public class Main {
     }
     return sum; // return result
   }
-
+  /**
+   * @param Gets the integers form the array.
+   * Then the it goes through the array to find the biggest number and returns it.
+   */
   public static int maxArray(int[] array) {
     int max = array[0];
     for (int num : array) {
@@ -60,17 +82,20 @@ public class Main {
 
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
-
-     int num1 = 5;
-     int num2 = 0;
-    
-     try {
-     System.out.println(num1 / num2);
-     //divide(num1, num2);
-     } catch (Exception e) {
-     System.out.println("Cannot divide by zero.");
-     System.out.println(e.getMessage());
-     }
+ 
+    int num1 = 5;
+    int num2 = 0;
+    /**
+     * the try-catch makes sure that num1 and num2 don't cause an exception and
+     * if they do then it will show a message. 
+     */
+    try {
+      System.out.println(num1 / num2);
+      // divide(num1, num2);
+    } catch (Exception e) {
+      System.out.println("Cannot divide by zero.");
+      System.out.println(e.getMessage());
+    }
 
     // Inheritance is where one class acquires the properties of another.
     // It is an "is a" relation
@@ -97,74 +122,74 @@ public class Main {
       p.printIntfo();// going to come from the person class and has to exist
     }
 
-    // System.out.println("Welcome to my integration project!");
-    // System.out.println("This program will calculate Body Mass Index");
-    //
-    // System.out.println("Enter the patient's first name: ");
-    // String firstName = in.nextLine();
-    // System.out.println("Enter the patient's last name: ");
-    // String lastName = in.nextLine();
-    //
-    // System.out.println("Enter the patient's weight in pounds: ");
-    // double weight = in.nextDouble();
-    // System.out.println("Enter the patient's height in inches: ");
-    // int height = in.nextInt();
-    //
-    // double bmi = calculateBMI(weight, height); // Calling the Calculate
-    // // method and inside the () are arguments
+    System.out.println("Welcome to my integration project!");
+    System.out.println("This program will calculate Body Mass Index");
+
+    System.out.println("Enter the patient's first name: ");
+    String firstName = in.nextLine();
+    System.out.println("Enter the patient's last name: ");
+    String lastName = in.nextLine();
+
+    System.out.println("Enter the patient's weight in pounds: ");
+    double weight = in.nextDouble();
+    System.out.println("Enter the patient's height in inches: ");
+    int height = in.nextInt();
+    /**
+     * @param calls weight and height to create a new value for bmi. 
+     */
+    double bmi = calculateBMI(weight, height); // Calling the Calculate
+    // method and inside the () are arguments
     // // and setting it as the value
     // // for BMI
-    // System.out.println("The patient " + firstName.substring(0,
-    // 1).toUpperCase()
-    // + firstName.substring(1) + " " + lastName.substring(0, 1).toUpperCase()
-    // + lastName.substring(1) + " has a Body Mass Index of: "
-    // + Math.round(bmi)); // Runs a substring to capitalize the first letter
+    System.out.println("The patient " + firstName.substring(0, 1).toUpperCase()
+        + firstName.substring(1) + " " + lastName.substring(0, 1).toUpperCase()
+        + lastName.substring(1) + " has a Body Mass Index of: "
+        + Math.round(bmi)); // Runs a substring to capitalize the first letter
     // // in each word
-    //
-    // if (bmi < 18.5) {// Determines what your BMI signifies
-    // System.out.print("You are considered Underweight");
-    // }
-    //
-    // else if (bmi < 25) {
-    // System.out.print("You are considered Normal.");
-    // }
-    //
-    // else if (bmi < 30) {
-    // System.out.print("You are considered Overweight.");
-    // }
-    //
-    // else {
-    // System.out.print("You are considered Obese.");
-    // }
-    // System.out.println();
-    //
-    // if ((int) bmi % 2 == 0) {// Determines if your BMI is even or odd
-    // System.out.println("Your BMI is an even number.");
-    // } else {
-    // System.out.println("Your BMI is an odd number.");
-    // }
-    // System.out.println();
-    //
-    // System.out.println("This part ask for two integers");
-    // System.out.println("Enter a value:");
-    // int value1 = in.nextInt();
-    // System.out.println("Enter another value:");
-    // int value2 = in.nextInt();
-    // System.out.println("The sum is: " + (value1 + value2));
-    // System.out.println("The difference is: " + (value2 - value1));
-    // System.out.println();
-    //
-    // // This part displays the color of my car.
-    // System.out.println("This part will give you the color of a car.");
-    // Car myCar = new Car();
-    // myCar.setColor("Black"); // sets the color to a specific color.
-    // System.out.println("My car's color is " + myCar.getColor());
-    // // gets the color that its set to from the top
+    if (bmi < 18.5) {// Determines what your BMI signifies
+      System.out.print("You are considered Underweight");
+    }
 
-    // System.out.println( "The name displayed is in format last name then first
-    // name.");
-    // simpleName someName = new simpleName("Bob", "Smith");
-    // someName.printName("Name is: ");
+    else if (bmi < 25) {
+      System.out.print("You are considered Normal.");
+    }
+
+    else if (bmi < 30) {
+      System.out.print("You are considered Overweight.");
+    }
+
+    else {
+      System.out.print("You are considered Obese.");
+    }
+    System.out.println();
+
+    if ((int) bmi % 2 == 0) {// Determines if your BMI is even or odd
+      System.out.println("Your BMI is an even number.");
+    } else {
+      System.out.println("Your BMI is an odd number.");
+    }
+    System.out.println();
+
+    System.out.println("This part ask for two integers");
+    System.out.println("Enter a value:");
+    int value1 = in.nextInt();
+    System.out.println("Enter another value:");
+    int value2 = in.nextInt();
+    System.out.println("The sum is: " + (value1 + value2));
+    System.out.println("The difference is: " + (value2 - value1));
+    System.out.println();
+
+    // // This part displays the color of my car.
+    System.out.println("This part will give you the color of a car.");
+    Car myCar = new Car();
+    myCar.setColor("Black"); // sets the color to a specific color.
+    System.out.println("My car's color is " + myCar.getColor());
+    // gets the color that its set to from the top
+
+    System.out
+        .println("The name displayed is in format last name then firstname");
+    simpleName someName = new simpleName("Bob", "Smith");
+    someName.printName("Name is: ");
 
     simpleName myName;
     myName = getsimpleName();
@@ -207,7 +232,9 @@ public class Main {
     System.out.println("The length of the word is: " + sb.length());
 
     System.out.println("The 10th letter is: " + sb.charAt(10));
-    //Example of exception being thrown if value for x1 is not an integer
+    /**
+     *Example of exception being thrown if value for x1 is not an integer
+     */
     int x1 = 0;
     boolean gottenGoodInput = false;
     while (gottenGoodInput == false) {
@@ -219,7 +246,7 @@ public class Main {
         System.out.println("Requires an integer");
         in.nextInt();
       }
-    } 
+    }
   }
 }
 
